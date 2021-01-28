@@ -34,3 +34,11 @@ body {
     font-size: 2rem;
     font-weight: bold;
 }
+
+.card__parrafo {
+    margin-bottom: 10px;
+}
+
+.card__parrafo:last-child {
+    margin-bottom: 0;
+}
