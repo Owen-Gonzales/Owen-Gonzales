@@ -45,6 +45,58 @@ body {
             margin-bottom: 0;
         }
 
+.aside {
+    min-width: 50px;
+    position: fixed;
+    right: 0;
+    background: royalblue;
+    transition: 1s all ease;
+}
+
+    .redes {
+        list-style: none;
+        transition: 1s all ease;
+    }
+
+        .redes__item {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s all ease;
+        }
+
+            .redes__item--facebook {
+                background: #4267b2;
+            }
+
+            .redes__item--youtube {
+                background: #ff0000;
+            }
+
+            .redes__item--twitter {
+                background: #55acee;
+            }
+
+            .redes__item--reddit {
+                background: #FF5722;
+            }
+
+            .redes__item--web {
+                background: #FFF;
+            }
+
+            .redes__item:hover {
+                width: 100px;
+                justify-content: start;
+                transition: 1s all ease;
+            }
+
+        .redes__icon {
+            width: 35px;
+            transition: 1s all ease;
+        }
+
 .whatsApp {
     position: fixed;
     bottom: 20px;
