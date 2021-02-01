@@ -113,6 +113,7 @@ body {
         }
 
             .redes__item--facebook {
+                border-radius: 0 10px 0 0;
                 background: #4267b2;
             }
 
@@ -129,12 +130,14 @@ body {
             }
 
             .redes__item--web {
+                border-radius: 0 0 10px 0;
                 background: #FFF;
             }
 
             .redes__item:hover {
                 width: 100px;
                 padding-right: 10px;
+                border-radius: 0 10px 10px 0;
                 justify-content: flex-end;
             }
 
