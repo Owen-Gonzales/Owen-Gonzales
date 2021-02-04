@@ -1,0 +1,5 @@
+Soy Owen gonzales de 13 años, vivo en Peru.
+
+¡Y estoy tomando un curso de GIT!
+
+Acabo de crear el footer  de la pagina web. 
