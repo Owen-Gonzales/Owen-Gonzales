@@ -55,13 +55,123 @@ body {
 .main {
     width: 100%;
     min-height: 100vh;
-    padding: 100px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
     background-image: linear-gradient(135deg,rgb(65, 166, 225) 20%, yellowgreen 110%);
 }
+
+.section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+    .section:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .section--center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section__subtitle {
+        margin: 0 60px;
+    }
+
+.carousel {
+    padding: 60px 0 75px;
+    margin: 0 60px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+    .carousel::-webkit-scrollbar {
+        height: 10px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+        .carousel::-webkit-scrollbar:vertical {
+            display: none;
+        }
+
+    .carousel::-webkit-scrollbar-thumb {
+        border-radius: 5px; 
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel:hover .fondo-item{
+        opacity: 0.8;        
+    }
+
+    .carousel:hover .fondo-item:hover {
+        opacity: 1;
+    }
+
+.fondo-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    transition: 0.2s all ease;
+    transform-origin: center left;
+}
+
+    .fondo-item:hover {
+        background-image: linear-gradient(bottom to top, rgba(0,0,0,0.5) red);
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    .fondo-item--carousel {
+        min-width: 300px;
+        max-width: 300px;
+        height: 350px;
+        /* Por alguna razon no funciona con un width estatico xd */
+    }
+
+        .fondo-item--carousel:hover ~ .fondo-item--carousel {
+            transform: translateX(60px);
+        }
+
+        .fondo-item--carousel:last-of-type{
+            /* background: red; */
+            min-width: 40px;
+            max-width: 40px;
+        }
+
+    .fondo__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fondo__description {
+        width: 100%;
+        height: 100%;
+        padding: 0 0 15px 10px;  
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.3) 0%,transparent 100%);
+        opacity: 0;
+        transition: 0.2s all ease;
+    }
+
+        .fondo-item:hover .fondo__description{
+            opacity: 1;
+        }
+
+        .fondo__title, .fondo__paragraph {
+            color: #FFF;
+        }
+
+        .fondo__paragraph {
+            word-wrap: wrap;
+            white-space: wrap;
+        }
 
 .card {
     max-width: 70vh;
@@ -78,7 +188,7 @@ body {
 
     .card:hover{ 
         box-shadow: 0 0 20px 10px #0002;
-        transform: scale(1.05);
+        /* transform: scale(1.05); */
         background: rgba(255,255,255,0.05);
     }
 
@@ -102,19 +212,19 @@ body {
                 margin-bottom: 0;
             }
 
-        .figure {
-            width: 100%;
-        }
+.figure {
+    width: 100%;
+}
 
-            .figure__image {
-                width: 100%;
-                border-radius: 15px;
-            }
-
-            .figure__description {
-                margin: 5px 0 0 5px; 
-                font-weight: 700;
-            }
+    .figure__image {
+        width: 100%;
+        border-radius: 15px;
+    }
+   
+    .figure__description {
+        margin: 5px 0 0 5px; 
+        font-weight: 700;
+    }
 
 .aside {
     width: 100px;
@@ -133,7 +243,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.5s all ease;
+            transition: 0.3s all ease;
         }
 
             .redes__item--facebook {
@@ -206,6 +316,28 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+    .section__subtitle {
+        margin: 0 25px;
+    }
+
+.carousel {
+    margin: 0 25px;
+}
+
+    .fondo-item:hover {
+        transform: scale(1.15);
+    }
+
+    .fondo-item--carousel {
+        min-width: 250px;
+        max-width: 250px;
+        height: 300px;
+    }
+
+        .fondo-item--carousel:hover ~ .fondo-item--carousel {
+            transform: translateX(40px);
+        }
 
 .card {
     max-width: 70vh;
